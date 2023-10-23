@@ -164,7 +164,7 @@ def predict(target_choice, train_size, new_df, output_multi):
 
     # Select the explanatory variables based on user input
     new_df2 = new_df[output_multi]
-    x = new_df2
+    X = new_df2
     y = df[target_choice]
 
     # Display the top 25 rows of the explanatory and target variables in the Streamlit app
