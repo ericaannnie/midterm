@@ -175,7 +175,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     col2.write(y.head(25))
 
     # Split the data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(x,y,test_size=0.2,random_state=123)
+    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=123)
 
     # Initialize and train a linear regression model
     lm = LinearRegression()
