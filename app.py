@@ -13,6 +13,8 @@ import random
 from PIL import Image
 import altair as alt
 
+test_size = 0.2
+
 # Image
 image_sal = Image.open('sal.jpg')
 st.image(image_sal, width=100)
@@ -214,7 +216,7 @@ def predict(target_choice, test_size, new_df, output_multi):
     return X_train, X_test, y_train, y_test, predictions, X, y
 
 # Call the prediction function and store the results
-X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size=0.2, new_df, list_var)
+X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size, new_df, list_var)
 
 # Display the results header in the Streamlit app
 st.subheader('🎯 Results')
