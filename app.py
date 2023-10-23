@@ -46,6 +46,9 @@ df['Education Level'] = df['Education Level'].replace(["Phd", "phD"], "PhD")
 
 df.groupby('Job Title').filter(lambda x : len(x)>30)
 
+# Create new df just in case
+df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
+
 #####################################################################
 
 
@@ -116,8 +119,6 @@ if app_mode == 'Introduction':
 if app_mode == 'Visualization':
 
     list_var = df2.columns
-    # Create new df just in case
-    df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
     # Display a header for the Visualization section
     st.markdown("## Visualization")
 
