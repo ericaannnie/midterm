@@ -54,7 +54,7 @@ df.groupby('Job Title').filter(lambda x : len(x)>30)
 
 
 # Dropdown menu for selecting which variable from the dataset to predict
-list_var = df.columns
+list_var = df2.columns
 select_variable =  st.sidebar.selectbox('🎯 Select Variable to Predict',list_var)
 
 # Introduction page content
@@ -115,7 +115,7 @@ if app_mode == 'Introduction':
 
 if app_mode == 'Visualization':
 
-    list_var = df.columns
+    list_var = df2.columns
     # Create new df just in case
     df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
     # Display a header for the Visualization section
@@ -163,7 +163,7 @@ if app_mode == 'Prediction':
 
     # Drop the selected variable from the dataset to prepare for prediction
     new_df = df.drop(labels=select_variable, axis=1)
-    list_var = df.columns
+    list_var = df2.columns
 
     # Allow users to select explanatory variables for prediction
     output_multi = st.multiselect("Select Explanatory Variables", list_var)
