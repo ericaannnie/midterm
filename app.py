@@ -185,7 +185,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
     X = pd.get_dummies(data=X, drop_first=True)
     
-    y = sal['Salary']
+    y = df['Salary']
 
     ####################################################################################
     #new_df2 = new_df[output_multi]
