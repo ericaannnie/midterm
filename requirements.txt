@@ -1,3 +1,10 @@
 pandas
 numpy
 streamlit
+seaborn
+matplotlib.pyplot
+sklearn.linear_model
+sklearn.model_selection
+sklearn import metrics
+plotly.express
+altair
