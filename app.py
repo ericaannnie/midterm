@@ -195,7 +195,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     # Display the top 25 rows of the explanatory and target variables in the Streamlit app
     col1, col2 = st.columns(2)
     col1.subheader("Feature Columns top 25")
-    col1.write(x.head(25))
+    col1.write(X.head(25))
     col2.subheader("Target Column top 25")
     col2.write(y.head(25))
 
@@ -212,7 +212,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     return X_train, X_test, y_train, y_test, predictions, X, y
 
 # Call the prediction function and store the results
-X_train, X_test, y_train, y_test, predictions, x, y = predict(select_variable, train_size, new_df, list_var)
+X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, train_size, new_df, list_var)
 
 # Display the results header in the Streamlit app
 st.subheader('🎯 Results')
