@@ -32,6 +32,24 @@ select_dataset =  st.sidebar.selectbox('💾 Select Dataset',["Salary"])
 
 # Load the salary quality dataset
 df = pd.read_csv("Salary_Data.csv")
+#####################################################################
+# Changes made to data
+df = df.dropna()
+
+df = df[df.Gender != 'Other']
+
+df['Education Level'] = df['Education Level'].replace(["Bachelor's Degree", "Bachelor's"], "Bachelor's")
+df['Education Level'] = df['Education Level'].replace(["Master's Degree", "Master's"], "Master's")
+df['Education Level'] = df['Education Level'].replace(["Phd", "phD"], "PhD")
+
+df.groupby('Job Title').filter(lambda x : len(x)>30)
+
+#####################################################################
+
+
+
+
+
 
 # Dropdown menu for selecting which variable from the dataset to predict
 list_variables = df.columns
@@ -163,9 +181,16 @@ def predict(target_choice, train_size, new_df, output_multi):
     """
 
     # Select the explanatory variables based on user input
-    new_df2 = new_df[output_multi]
-    x = new_df2
-    y = df[target_choice]
+   ####################################################################################
+    X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
+    X = pd.get_dummies(data=X, drop_first=True)
+    
+    y = sal['Salary']
+
+    ####################################################################################
+    #new_df2 = new_df[output_multi]
+   # x = new_df2
+    #y = df[target_choice]
 
     # Display the top 25 rows of the explanatory and target variables in the Streamlit app
     col1, col2 = st.columns(2)
