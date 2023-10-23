@@ -27,7 +27,7 @@ st.sidebar.header("Dashboard")
 st.sidebar.markdown("---")
 
 # Dropdown menu for selecting the page mode (Introduction, Visualization, Prediction, Deployment)
-app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction','Deployment'])
+app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualization','Prediction'])
 
 # Dropdown menu for selecting the dataset (currently only "Salary" is available)
 select_dataset =  st.sidebar.selectbox('💾 Select Dataset',["Salary"])
