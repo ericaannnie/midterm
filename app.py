@@ -163,7 +163,7 @@ if app_mode == 'Prediction':
     output_multi = st.multiselect("Select Explanatory Variables", list_var)
 
 # Define a function to perform linear regression prediction
-def predict(target_choice, train_size, new_df, output_multi):
+def predict(target_choice, test_size, new_df, output_multi):
     """
     This function performs linear regression prediction.
 
@@ -200,7 +200,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     col2.write(y.head(25))
 
     # Split the data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=123)
+    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
 
     # Initialize and train a linear regression model
     lm = LinearRegression()
