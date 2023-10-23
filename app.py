@@ -209,7 +209,7 @@ def predict(target_choice, train_size, new_df, output_multi):
     # Predict the target variable for the test set
     predictions = lm.predict(X_test)
 
-    return X_train, X_test, y_train, y_test, predictions, x, y
+    return X_train, X_test, y_train, y_test, predictions, X, y
 
 # Call the prediction function and store the results
 X_train, X_test, y_train, y_test, predictions, x, y = predict(select_variable, train_size, new_df, list_var)
