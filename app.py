@@ -114,6 +114,8 @@ if app_mode == 'Introduction':
 
 
 if app_mode == 'Visualization':
+
+    list_var = df.columns
     # Create new df just in case
     df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
     # Display a header for the Visualization section
