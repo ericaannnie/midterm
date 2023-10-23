@@ -5,7 +5,7 @@ seaborn
 matplotlib.pyplot
 sklearn.linear_model
 sklearn.model_selection
-sklearn
+scikit-learn
 plotly.express
 random
 PIL
