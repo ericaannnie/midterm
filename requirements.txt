@@ -2,3 +2,11 @@ pandas
 numpy
 streamlit
 seaborn
+matplotlib.pyplot
+sklearn.linear_model
+sklearn.model_selection
+sklearn
+plotly.express
+random
+PIL
+altair
