@@ -112,6 +112,8 @@ if app_mode == 'Introduction':
 
 
 if app_mode == 'Visualization':
+    # Create new df just in case
+    df2 = df[['Age', 'Years of Experience', 'Salary]].copy()
     # Display a header for the Visualization section
     st.markdown("## Visualization")
 
@@ -127,22 +129,22 @@ if app_mode == 'Visualization':
     # Content for the "Line Chart" tab
     tab1.subheader("Line Chart")
     # Display a line chart for the selected variables
-    st.line_chart(data=df, x=symbols[0], y=symbols[1], width=0, height=0, use_container_width=True)
+    st.line_chart(data=df2, x=symbols[0], y=symbols[1], width=0, height=0, use_container_width=True)
     # Display a bar chart for the selected variables
-    st.bar_chart(data=df, x=symbols[0], y=symbols[1], use_container_width=True)
+    st.bar_chart(data=df2, x=symbols[0], y=symbols[1], use_container_width=True)
 
     # Content for the "Correlation" tab
     tab2.subheader("Correlation Tab 📉")
     # Create a heatmap to show correlations between variables in the dataset
     fig, ax = plt.subplots(figsize=(width1, width1))
-    sns.heatmap(df.corr(), cmap=sns.cubehelix_palette(8), annot=True, ax=ax)
+    sns.heatmap(df2.corr(), cmap=sns.cubehelix_palette(8), annot=True, ax=ax)
     tab2.write(fig)
 
     # Display a pairplot for the first five variables in the dataset
     st.markdown("### Pairplot")
-    df2 = df
+    df3 = df2
 
-    fig3 = sns.pairplot(df2)
+    fig3 = sns.pairplot(df3)
     st.pyplot(fig3)
 
 
