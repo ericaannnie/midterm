@@ -54,8 +54,8 @@ df.groupby('Job Title').filter(lambda x : len(x)>30)
 
 
 # Dropdown menu for selecting which variable from the dataset to predict
-list_variables = df.columns
-select_variable =  st.sidebar.selectbox('🎯 Select Variable to Predict',list_variables)
+list_var = df.columns
+select_variable =  st.sidebar.selectbox('🎯 Select Variable to Predict',list_var)
 
 # Introduction page content
 if app_mode == 'Introduction':
@@ -122,7 +122,7 @@ if app_mode == 'Visualization':
     st.markdown("## Visualization")
 
     # Allow users to select two variables from the dataset for visualization
-    symbols = st.multiselect("Select two variables", list_variables, ["Education Level", "Years of Experience"])
+    symbols = st.multiselect("Select two variables", list_var, [ "Years of Experience", "Salary"])
 
     # Create a slider in the sidebar for users to adjust the plot width
     width1 = st.sidebar.slider("plot width", 1, 25, 10)
