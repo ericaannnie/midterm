@@ -67,7 +67,7 @@ if app_mode == 'Introduction':
 
 
 
-st.markdown("### 02 - Missing Values")
+    st.markdown("### 02 - Missing Values")
     st.markdown("Missing values are known as null or NaN values. Missing data tends to **introduce bias that leads to misleading results.**")
     dfnull = df.isnull().sum()/len(df)*100
     totalmiss = dfnull.sum().round(2)
