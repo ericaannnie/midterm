@@ -161,7 +161,7 @@ if app_mode == 'Prediction':
 
     # Drop the selected variable from the dataset to prepare for prediction
     new_df = df.drop(labels=select_variable, axis=1)
-    list_var = new_df.columns
+    list_var = df.columns
 
     # Allow users to select explanatory variables for prediction
     output_multi = st.multiselect("Select Explanatory Variables", list_var)
