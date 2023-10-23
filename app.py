@@ -113,7 +113,7 @@ if app_mode == 'Introduction':
 
 if app_mode == 'Visualization':
     # Create new df just in case
-    df2 = df[['Age', 'Years of Experience', 'Salary]].copy()
+    df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
     # Display a header for the Visualization section
     st.markdown("## Visualization")
 
