@@ -108,6 +108,8 @@ if app_mode == 'Introduction':
     #col5.markdown("Number of years in the workforce")
     #col6.markdown(" **Salary** ")
     #col6.markdown("Salary in USD of the professional. ")
+    "<br>"
+    "<br>"
 
 
     # Allow users to view either the top or bottom rows of the dataset
