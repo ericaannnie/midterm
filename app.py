@@ -72,11 +72,12 @@ if app_mode == 'Introduction':
     # Define CSS styles for the boxes
     box_style = """
         border: 2px solid #000;
-        padding: 20px;
+        padding: 10px; 
         margin: 10px;
-        border-radius: 10px; /* Round the corners */
-        background-color: #f0f0f0; /* Set background color */
-        box-shadow: 5px 5px 10px #888; /* Add a box shadow */
+        border-radius: 10px; 
+        background-color: #f0f0f0; 
+        box-shadow: 5px 5px 10px #888; 
+        width: 250px; 
     """
 
     # Apply the box styles to each column
