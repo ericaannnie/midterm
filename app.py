@@ -71,7 +71,7 @@ if app_mode == 'Introduction':
 
     # Define CSS styles for the boxes
     box_style = """
-        border: 2px solid #F3E5AB;
+        border: 2px solid #FFFFFF;
         padding: 10px; 
         margin: 5px;
         border-radius: 10px; 
