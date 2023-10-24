@@ -90,24 +90,24 @@ if app_mode == 'Introduction':
 ##############
 
 # Split the page into 10 columns to display information about each wine quality variable
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    #col1, col2, col3, col4, col5, col6 = st.columns(6)
 
     # Descriptions for each variable in the dataset
     # ... [The code here provides descriptions for each wine quality variable]
 
 
-    col1.markdown(" **Age** ")
-    col1.markdown("Age at which the person is currently")
-    col2.markdown(" **Gender** ")
-    col2.markdown("Gender of the person. Either male or female.")
-    col3.markdown(" **Education Level** ")       
-    col3.markdown("Education level of the professional. Ex: Bachelors")
-    col4.markdown(" **Job Title** ")       
-    col4.markdown("Title of the professional's job. Ex: Project Manager")
-    col5.markdown(" **Years of Experience** ")
-    col5.markdown("Number of years in the workforce")
-    col6.markdown(" **Salary** ")
-    col6.markdown("Salary in USD of the professional. ")
+    #col1.markdown(" **Age** ")
+    #col1.markdown("Age at which the person is currently")
+    #col2.markdown(" **Gender** ")
+    #col2.markdown("Gender of the person. Either male or female.")
+    #col3.markdown(" **Education Level** ")       
+    #col3.markdown("Education level of the professional. Ex: Bachelors")
+    #col4.markdown(" **Job Title** ")       
+    #col4.markdown("Title of the professional's job. Ex: Project Manager")
+    #col5.markdown(" **Years of Experience** ")
+    #col5.markdown("Number of years in the workforce")
+    #col6.markdown(" **Salary** ")
+    #col6.markdown("Salary in USD of the professional. ")
 
 
     # Allow users to view either the top or bottom rows of the dataset
