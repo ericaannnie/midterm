@@ -75,7 +75,6 @@ if app_mode == 'Introduction':
         padding: 10px; 
         margin: 5px;
         border-radius: 10px; 
-        box-shadow: 5px 5px 10px #888; 
         width: 110px;
         height: 200px;
     """
