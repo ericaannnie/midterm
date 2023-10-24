@@ -69,7 +69,7 @@ if app_mode == 'Introduction':
     # Split the page into 6 columns to display information about each salary variable
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
-    # Define CSS styles for the boxes
+    # CSS to style the columns
     box_style = """
         border: 2px solid #FFFFFF;
         padding: 10px; 
@@ -80,9 +80,8 @@ if app_mode == 'Introduction':
         font-size: 15px;
     """
 
-    # Apply the box styles to each column
-
-    col1.markdown(f'<div style="{box_style}"><strong>Age</strong><br><br><br>The person's current age.</div>', unsafe_allow_html=True)
+    # Apply to each column
+    col1.markdown(f'<div style="{box_style}"><strong>Age</strong><br><br><br>The person\'s current age.</div>', unsafe_allow_html=True)
     col2.markdown(f'<div style="{box_style}"><strong>Gender</strong><br><br><br>Gender of the person. Either male or female.</div>', unsafe_allow_html=True)
     col3.markdown(f'<div style="{box_style}"><strong>Education Level</strong><br><br>Education level of the professional.<br>Ex: Bachelors</div>', unsafe_allow_html=True)
     col4.markdown(f'<div style="{box_style}"><strong>Job Title</strong><br><br><br>Title of the professional\'s job.<br>Ex: Project Manager</div>', unsafe_allow_html=True)
