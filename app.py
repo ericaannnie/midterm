@@ -229,9 +229,6 @@ if app_mode == 'Prediction':
         - x, y: Full dataset split into explanatory variables and target variable.
         """
 
-        test_size = float(test_size)
-        test_size_number = float(test_size)
-    
         # Select the explanatory variables based on user input
        ####################################################################################
         X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
@@ -253,7 +250,7 @@ if app_mode == 'Prediction':
     
         # Split the data into training and testing sets
         X = pd.get_dummies(data=X, drop_first=True)
-        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=test_size_number,random_state=40)
+        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
     
         # Initialize and train a linear regression model
         lm = LinearRegression()
