@@ -73,7 +73,7 @@ if app_mode == 'Introduction':
     box_style = """
         border: 2px solid #000;
         padding: 10px; 
-        margin: 30px;
+        margin: 5px;
         border-radius: 10px; 
         background-color: #f0f0f0; 
         box-shadow: 5px 5px 10px #888; 
