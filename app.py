@@ -81,7 +81,7 @@ if app_mode == 'Introduction':
     col4.markdown(" **Job Title** ")       
     col4.markdown("Title of the professional's job. Ex: Project Manager")
     col5.markdown(" **Years of Experience** ")
-    col5.markdown("Number of years in the workforce)
+    col5.markdown("Number of years in the workforce")
     col6.markdown(" **Salary** ")
     col6.markdown("Salary in USD of the professional. ")
 
