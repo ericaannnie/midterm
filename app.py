@@ -66,7 +66,7 @@ if app_mode == 'Introduction':
     st.markdown("### 00 - Show Dataset")
 
 # Split the page into 10 columns to display information about each wine quality variable
-    col1, col2, col3, col4, col5, col6 = st.columns(10)
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
 
     # Descriptions for each variable in the dataset
     # ... [The code here provides descriptions for each wine quality variable]
