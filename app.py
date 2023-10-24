@@ -85,6 +85,36 @@ if app_mode == 'Introduction':
     col6.markdown(" **Salary** ")
     col6.markdown("Salary in USD of the professional. ")
 
+    ###
+
+    column_style = """
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 10px;
+    """
+
+    st.title("Professional Information")
+
+    # Split the page into 6 columns to display information about each variable
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+    # Apply the style to each column
+    col1.markdown(" **Age** ", unsafe_allow_html=True, key='col1')
+    col1.markdown("Age at which the person is currently", unsafe_allow_html=True, key='col1')
+    col2.markdown(" **Gender** ", unsafe_allow_html=True, key='col2')
+    col2.markdown("Gender of the person. Either male or female.", unsafe_allow_html=True, key='col2')
+    col3.markdown(" **Education Level** ", unsafe_allow_html=True, key='col3')
+    col3.markdown("Education level of the professional. Ex: Bachelors", unsafe_allow_html=True, key='col3')
+    col4.markdown(" **Job Title** ", unsafe_allow_html=True, key='col4')
+    col4.markdown("Title of the professional's job. Ex: Project Manager", unsafe_allow_html=True, key='col4')
+    col5.markdown(" **Years of Experience** ", unsafe_allow_html=True, key='col5')
+    col5.markdown("Number of years in the workforce", unsafe_allow_html=True, key='col5')
+    col6.markdown(" **Salary** ", unsafe_allow_html=True, key='col6')
+    col6.markdown("Salary in USD of the professional.", unsafe_allow_html=True, key='col6')
+
+    # Apply the CSS style to the columns
+    st.markdown(f"<style>{column_style}</style>", unsafe_allow_html=True)
+
 
     # Allow users to view either the top or bottom rows of the dataset
     num = st.number_input('No. of Rows', 5, 10)
@@ -98,6 +128,7 @@ if app_mode == 'Introduction':
     st.markdown("Number of rows and columns helps us to determine how large the dataset is.")
     st.text('(Rows,Columns)')
     st.write(df.shape)
+
 
     st.markdown("### 01 - Description")
     st.dataframe(df.describe())
