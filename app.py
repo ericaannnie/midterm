@@ -65,6 +65,26 @@ if app_mode == 'Introduction':
     # Display dataset details
     st.markdown("### 00 - Show Dataset")
 
+#############
+    # Split the page into 6 columns to display information about each salary variable
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+    # Define CSS styles for the boxes
+    box_style = """
+        border: 2px solid #000;
+        padding: 10px;
+        margin: 10px;
+    """
+
+    # Apply the box styles to each column
+    col1.markdown(f'<div style="{box_style}">**Age**<br>Age at which the person is currently</div>', unsafe_allow_html=True)
+    col2.markdown(f'<div style="{box_style}">**Gender**<br>Gender of the person. Either male or female.</div>', unsafe_allow_html=True)
+    col3.markdown(f'<div style="{box_style}">**Education Level**<br>Education level of the professional. Ex: Bachelors</div>', unsafe_allow_html=True)
+    col4.markdown(f'<div style="{box_style}">**Job Title**<br>Title of the professional\'s job. Ex: Project Manager</div>', unsafe_allow_html=True)
+    col5.markdown(f'<div style="{box_style}">**Years of Experience**<br>Number of years in the workforce</div>', unsafe_allow_html=True)
+    col6.markdown(f'<div style="{box_style}">**Salary**<br>Salary in USD of the professional.</div>', unsafe_allow_html=True)
+##############
+
 # Split the page into 10 columns to display information about each wine quality variable
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 
