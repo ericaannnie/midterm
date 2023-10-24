@@ -81,7 +81,8 @@ if app_mode == 'Introduction':
     """
 
     # Apply the box styles to each column
-    col1.markdown(f'<div style="{box_style}"><strong>Age</strong><br><br><br>The person's current age</div>', unsafe_allow_html=True)
+
+    col1.markdown(f'<div style="{box_style}"><strong>Age</strong><br><br><br>The person's current age.</div>', unsafe_allow_html=True)
     col2.markdown(f'<div style="{box_style}"><strong>Gender</strong><br><br><br>Gender of the person. Either male or female.</div>', unsafe_allow_html=True)
     col3.markdown(f'<div style="{box_style}"><strong>Education Level</strong><br><br>Education level of the professional.<br>Ex: Bachelors</div>', unsafe_allow_html=True)
     col4.markdown(f'<div style="{box_style}"><strong>Job Title</strong><br><br><br>Title of the professional\'s job.<br>Ex: Project Manager</div>', unsafe_allow_html=True)
