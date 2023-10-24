@@ -229,7 +229,7 @@ if app_mode == 'Prediction':
         - x, y: Full dataset split into explanatory variables and target variable.
         """
 
-        test_size_number = test_size
+        test_size_number = float(test_size)
     
         # Select the explanatory variables based on user input
        ####################################################################################
