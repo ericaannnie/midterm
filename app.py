@@ -82,9 +82,9 @@ if app_mode == 'Introduction':
     # Apply the box styles to each column
     col1.markdown(f'<div style="{box_style}"><strong>Age</strong><br><br><br>Age at which the person is currently</div>', unsafe_allow_html=True)
     col2.markdown(f'<div style="{box_style}"><strong>Gender</strong><br><br><br>Gender of the person. Either male or female.</div>', unsafe_allow_html=True)
-    col3.markdown(f'<div style="{box_style}"><strong>Education Level</strong><br><br><br>Education level of the professional. Ex: Bachelors</div>', unsafe_allow_html=True)
+    col3.markdown(f'<div style="{box_style}"><strong>Education Level</strong><br><br>Education level of the professional. Ex: Bachelors</div>', unsafe_allow_html=True)
     col4.markdown(f'<div style="{box_style}"><strong>Job Title</strong><br><br><br>Title of the professional\'s job. Ex: Project Manager</div>', unsafe_allow_html=True)
-    col5.markdown(f'<div style="{box_style}"><strong>Years of Experience</strong><br><br><br>Number of years in the workforce</div>', unsafe_allow_html=True)
+    col5.markdown(f'<div style="{box_style}"><strong>Years of Experience</strong><br><br>Number of years in the workforce</div>', unsafe_allow_html=True)
     col6.markdown(f'<div style="{box_style}"><strong>Salary</strong><br><br><br>Salary in USD of the professional.</div>', unsafe_allow_html=True)
 ##############
 
