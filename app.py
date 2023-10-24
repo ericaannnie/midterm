@@ -76,7 +76,7 @@ if app_mode == 'Introduction':
         margin: 5px;
         border-radius: 10px; 
         width: 110px;
-        height: 220px;
+        height: 230px;
     """
 
     # Apply the box styles to each column
