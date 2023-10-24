@@ -209,63 +209,63 @@ if app_mode == 'Prediction':
     # Allow users to select explanatory variables for prediction
     output_multi = st.multiselect("Select Explanatory Variables", list_var)
 
-# Define a function to perform linear regression prediction
-def predict(target_choice, test_size, new_df, output_multi):
-    """
-    This function performs linear regression prediction.
-
-    Parameters:
-    - target_choice: The target variable to be predicted.
-    - train_size: The proportion of the dataset to include in the training set.
-    - new_df: The dataframe without the target variable.
-    - output_multi: The explanatory variables selected by the user.
-
-    Returns:
-    - X_train, X_test: Training and testing data.
-    - y_train, y_test: Training and testing target values.
-    - predictions: Predicted values for the test set.
-    - x, y: Full dataset split into explanatory variables and target variable.
-    """
-
-    # Select the explanatory variables based on user input
-   ####################################################################################
-    X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
-    X = pd.get_dummies(data=X, drop_first=True)
+    # Define a function to perform linear regression prediction
+    def predict(target_choice, test_size, new_df, output_multi):
+        """
+        This function performs linear regression prediction.
     
-    y = df['Salary']
-
-    ####################################################################################
-    #new_df2 = new_df[output_multi]
-   # x = new_df2
-    #y = df[target_choice]
-
-    # Display the top 25 rows of the explanatory and target variables in the Streamlit app
-    col1, col2 = st.columns(2)
-    col1.subheader("Feature Columns top 25")
-    col1.write(X.head(25))
-    col2.subheader("Target Column top 25")
-    col2.write(y.head(25))
-
-    # Split the data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
-
-    # Initialize and train a linear regression model
-    lm = LinearRegression()
-    lm.fit(X_train,y_train)
-
-    # Predict the target variable for the test set
-    predictions = lm.predict(X_test)
-
-    return X_train, X_test, y_train, y_test, predictions, X, y
-
-# Call the prediction function and store the results
-X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size, df, list_var)
-
-# Display the results header in the Streamlit app
-st.subheader('🎯 Results')
-
-# Display prediction metrics
-st.write("1) The model explains,", np.round(mt.explained_variance_score(y_test, predictions)*100,2),"% variance of the target feature")
-st.write("2) The Mean Absolute Error of model is:", np.round(mt.mean_absolute_error(predictions,y_test  ),2))
-st.write("3) MSE: ", np.round(mt.mean_squared_error(predictions,y_test ),2))
-st.write("4) The R-Square score of the model is " , np.round(mt.r2_score(predictions, y_test),2))
+        Parameters:
+        - target_choice: The target variable to be predicted.
+        - train_size: The proportion of the dataset to include in the training set.
+        - new_df: The dataframe without the target variable.
+        - output_multi: The explanatory variables selected by the user.
+    
+        Returns:
+        - X_train, X_test: Training and testing data.
+        - y_train, y_test: Training and testing target values.
+        - predictions: Predicted values for the test set.
+        - x, y: Full dataset split into explanatory variables and target variable.
+        """
+    
+        # Select the explanatory variables based on user input
+       ####################################################################################
+        X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
+        X = pd.get_dummies(data=X, drop_first=True)
+        
+        y = df['Salary']
+    
+        ####################################################################################
+        #new_df2 = new_df[output_multi]
+       # x = new_df2
+        #y = df[target_choice]
+    
+        # Display the top 25 rows of the explanatory and target variables in the Streamlit app
+        col1, col2 = st.columns(2)
+        col1.subheader("Feature Columns top 25")
+        col1.write(X.head(25))
+        col2.subheader("Target Column top 25")
+        col2.write(y.head(25))
+    
+        # Split the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
+    
+        # Initialize and train a linear regression model
+        lm = LinearRegression()
+        lm.fit(X_train,y_train)
+    
+        # Predict the target variable for the test set
+        predictions = lm.predict(X_test)
+    
+        return X_train, X_test, y_train, y_test, predictions, X, y
+    
+    # Call the prediction function and store the results
+    X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size, df, list_var)
+    
+    # Display the results header in the Streamlit app
+    st.subheader('🎯 Results')
+    
+    # Display prediction metrics
+    st.write("1) The model explains,", np.round(mt.explained_variance_score(y_test, predictions)*100,2),"% variance of the target feature")
+    st.write("2) The Mean Absolute Error of model is:", np.round(mt.mean_absolute_error(predictions,y_test  ),2))
+    st.write("3) MSE: ", np.round(mt.mean_squared_error(predictions,y_test ),2))
+    st.write("4) The R-Square score of the model is " , np.round(mt.r2_score(predictions, y_test),2))
