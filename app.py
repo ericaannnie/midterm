@@ -17,7 +17,7 @@ test_size = 0.2
 
 # Image
 image_sal = Image.open('sal.jpg')
-st.image(image_sal, width=600)
+st.image(image_sal, width=500)
 
 # Title
 st.title("Employment Salary Prediction")
