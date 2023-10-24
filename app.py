@@ -77,7 +77,7 @@ if app_mode == 'Introduction':
         border-radius: 10px; 
         background-color: #f0f0f0; 
         box-shadow: 5px 5px 10px #888; 
-        width: 150px;
+        width: 200px;
         height: 150px;
     """
 
