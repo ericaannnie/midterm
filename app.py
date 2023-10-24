@@ -231,7 +231,7 @@ if app_mode == 'Prediction':
         # Select the explanatory variables based on user input
        ####################################################################################
         X = df[['Age','Gender','Education Level', 'Job Title','Years of Experience']]
-        X = pd.get_dummies(data=X, drop_first=True)
+        
         
         y = df['Salary']
     
@@ -248,6 +248,7 @@ if app_mode == 'Prediction':
         col2.write(y.head(25))
     
         # Split the data into training and testing sets
+        X = pd.get_dummies(data=X, drop_first=True)
         X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
     
         # Initialize and train a linear regression model
