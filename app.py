@@ -258,13 +258,13 @@ def predict(target_choice, test_size, new_df, output_multi):
     return X_train, X_test, y_train, y_test, predictions, X, y
 
 # Call the prediction function and store the results
-    X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size, df, list_var)
+X_train, X_test, y_train, y_test, predictions, X, y = predict(select_variable, test_size, df, list_var)
 
 # Display the results header in the Streamlit app
-    st.subheader('🎯 Results')
+st.subheader('🎯 Results')
 
 # Display prediction metrics
-    st.write("1) The model explains,", np.round(mt.explained_variance_score(y_test, predictions)*100,2),"% variance of the target feature")
-    st.write("2) The Mean Absolute Error of model is:", np.round(mt.mean_absolute_error(predictions,y_test  ),2))
-    st.write("3) MSE: ", np.round(mt.mean_squared_error(predictions,y_test ),2))
-    st.write("4) The R-Square score of the model is " , np.round(mt.r2_score(predictions, y_test),2))
+st.write("1) The model explains,", np.round(mt.explained_variance_score(y_test, predictions)*100,2),"% variance of the target feature")
+st.write("2) The Mean Absolute Error of model is:", np.round(mt.mean_absolute_error(predictions,y_test  ),2))
+st.write("3) MSE: ", np.round(mt.mean_squared_error(predictions,y_test ),2))
+st.write("4) The R-Square score of the model is " , np.round(mt.r2_score(predictions, y_test),2))
