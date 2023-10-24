@@ -250,7 +250,7 @@ if app_mode == 'Prediction':
     
         # Split the data into training and testing sets
         X = pd.get_dummies(data=X, drop_first=True)
-        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=test_size,random_state=40)
+        X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=40)
     
         # Initialize and train a linear regression model
         lm = LinearRegression()
