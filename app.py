@@ -207,7 +207,7 @@ if app_mode == 'Prediction':
     list_var = df2.columns
 
     # Allow users to select explanatory variables for prediction
-    output_multi = st.multiselect("Select Explanatory Variables",  "Years of Experience", "Age"])
+    output_multi = st.multiselect("Select Explanatory Variables",  ["Years of Experience", "Age"])
 
     # Define a function to perform linear regression prediction
     def predict(target_choice, test_size, new_df, output_multi):
