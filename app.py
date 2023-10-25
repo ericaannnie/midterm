@@ -33,7 +33,7 @@ app_mode = st.sidebar.selectbox('🔎 Select Page',['Introduction','Visualizatio
 select_dataset =  st.sidebar.selectbox('💾 Select Dataset',["Salary"])
 
 # Load the salary quality dataset
-df = pd.read_csv("Salary_Data.csv")
+df_temp = pd.read_csv("Salary_Data.csv")
 #####################################################################
 # Changes made to data
 df = df.dropna()
@@ -133,7 +133,7 @@ if app_mode == 'Introduction':
 
     st.markdown("### 02 - Missing Values")
     st.markdown("Missing values are known as null or NaN values. Missing data tends to **introduce bias that leads to misleading results.**")
-    dfnull = df.isnull().sum()/len(df)*100
+    dfnull = df_temp.isnull().sum()/len(df_temp)*100
     totalmiss = dfnull.sum().round(2)
     st.write("Percentage of total missing values:",totalmiss)
     st.write(dfnull)
