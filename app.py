@@ -1,4 +1,4 @@
-!pip install codecarbon --quiet
+pip install codecarbon
 
 import streamlit as st
 import pandas as pd
