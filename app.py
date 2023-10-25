@@ -36,7 +36,7 @@ select_dataset =  st.sidebar.selectbox('💾 Select Dataset',["Salary"])
 df_temp = pd.read_csv("Salary_Data.csv")
 #####################################################################
 # Changes made to data
-df = df.dropna()
+df = df_temp.dropna()
 
 df = df[df.Gender != 'Other']
 
