@@ -57,7 +57,7 @@ df2 = df[['Age', 'Years of Experience', 'Salary']].copy()
 
 # Dropdown menu for selecting which variable from the dataset to predict
 list_var = df2.columns
-select_variable =  st.sidebar.selectbox('🎯 Select Variable to Predict',list_var)
+select_variable =  st.sidebar.selectbox('🎯 Select Variable to Predict',['Salary'])
 
 # Introduction page content
 if app_mode == 'Introduction':
@@ -207,7 +207,7 @@ if app_mode == 'Prediction':
     list_var = df2.columns
 
     # Allow users to select explanatory variables for prediction
-    output_multi = st.multiselect("Select Explanatory Variables", ['Salary'])
+    output_multi = st.multiselect("Select Explanatory Variables",  "Years of Experience", "Age"])
 
     # Define a function to perform linear regression prediction
     def predict(target_choice, test_size, new_df, output_multi):
