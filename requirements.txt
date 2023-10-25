@@ -4,4 +4,3 @@ streamlit
 seaborn
 scikit-learn
 pillow
-codecarbon
